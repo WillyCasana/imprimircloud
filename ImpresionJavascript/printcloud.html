@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://www.google.com/cloudprint/client/cpgadget.js">
+        </script>
+        <script>
+         window.onload = function() {
+         var gadget = new cloudprint.Gadget();
+        gadget.setPrintButton(cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
+        gadget.setPrintDocument("url", "Test Page", "");
+        gadget.setPrintDocument("application/pdf", "PDF Doc" );
+        gadget.setPrintDocument("url", "Test Page",  "http://www.juntadeandalucia.es/averroes/centros-tic/29009041/helvia/sitio/upload/trabajo_de_alejandro_magno_ivan.pdf");
+        var btn = document.getElementById("custom_print_button");
+        gadget.setPrintButton(btn);
+        gadget.openPrintDialog();
+        }
+        </script>
+    </head>
+    <body>
+        <div id="print_button_container">
+            <button id="custom_print_button">
+
+            </button>
+        </div>
+    </body>
+</html>
